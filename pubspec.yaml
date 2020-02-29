@@ -1,0 +1,22 @@
+name: simple_bloc_example
+description: A simple flutter project that demonstrates bloc pattern using bloc and flutter_bloc.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  bloc: ^3.0.0
+  flutter_bloc: ^3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
