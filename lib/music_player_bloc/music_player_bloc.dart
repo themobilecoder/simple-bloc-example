@@ -16,12 +16,11 @@ class MusicPlayerBloc extends Bloc<MusicPlayerEvent, MusicPlayerState> {
   MusicPlayerState get initialState => MusicPlayerIdle();
 
   @override
-  Stream<MusicPlayerState> mapEventToState(
-    MusicPlayerEvent event,
-  ) async* {
+  Stream<MusicPlayerState> mapEventToState(MusicPlayerEvent event) async* {
     if (event is PlayEvent) {
-      _musicPlayer.play();
-      yield MusicPlayerPlaying(musicTitle: 'Fix You');
+      final musicTitle = event.musicTitle;
+      _musicPlayer.play(musicTitle);
+      yield MusicPlayerPlaying(musicTitle: musicTitle);
     } else if (event is PauseEvent) {
       _musicPlayer.pause();
       yield MusicPlayerPaused();

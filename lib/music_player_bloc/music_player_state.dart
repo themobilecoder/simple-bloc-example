@@ -9,8 +9,7 @@ class MusicPlayerIdle extends MusicPlayerState {}
 
 class MusicPlayerPlaying extends MusicPlayerState {
   final String musicTitle;
-  const MusicPlayerPlaying({@required this.musicTitle})
-      : assert(musicTitle != null);
+  const MusicPlayerPlaying({@required this.musicTitle}) : assert(musicTitle != null);
 }
 
 class MusicPlayerPaused extends MusicPlayerState {}

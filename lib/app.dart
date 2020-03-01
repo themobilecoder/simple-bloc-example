@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Simple Bloc Pattern',
+        title: 'Music Player',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
@@ -45,7 +45,7 @@ class MainScreen extends StatelessWidget {
                 return SimpleButton(
                     icon: Icons.play_arrow,
                     onPressed: () {
-                      BlocProvider.of<MusicPlayerBloc>(context).add(PlayEvent());
+                      BlocProvider.of<MusicPlayerBloc>(context).add(PlayEvent(musicTitle: 'Sandstorm'));
                     });
               } else {
                 return SimpleButton(

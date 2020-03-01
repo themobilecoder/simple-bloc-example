@@ -1,5 +1,5 @@
 abstract class MusicPlayer {
-  Future<bool> play();
+  Future<bool> play(String musicTitle);
   Future<bool> pause();
   Future<bool> stop();
 }
@@ -11,7 +11,7 @@ class DummyMusicPlayer extends MusicPlayer {
   }
 
   @override
-  Future<bool> play() {
+  Future<bool> play(String musicTitle) {
     return Future.value(true);
   }
 
